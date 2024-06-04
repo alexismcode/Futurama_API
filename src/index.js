@@ -1,17 +1,19 @@
+// Importación de módulos y recursos necesarios desde React y ReactDOM
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css'; // Estilos CSS globales
+import App from './App'; // Componente principal de la aplicación
+import reportWebVitals from './reportWebVitals'; // Función para reportar métricas web
 
+// Creación de un contenedor de raíz usando ReactDOM.createRoot, que recibe un elemento del DOM como argumento
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Renderizado del componente principal App dentro del contenedor de raíz
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode> {/* Modo estricto de React */}
+    <App /> {/* Componente principal de la aplicación */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(); // Llamada a la función para reportar métricas web
+
