@@ -15,6 +15,41 @@ Este proyecto es una aplicación web que utiliza la API de Futurama para mostrar
 - 📄 Abre el archivo index.html en tu navegador web.
 - 🎉 ¡Explora la aplicación y disfruta de la experiencia Futurama!
 
+## Dockerfile
+
+El archivo `Dockerfile` incluido en este repositorio se utiliza para construir una imagen Docker de esta aplicación. Aquí está la explicación de cada comando en el `Dockerfile`:
+
+1. **FROM node:20.14.0**: Usa la imagen oficial de Node.js como imagen base.
+2. **WORKDIR /app**: Establece el directorio de trabajo en /app.
+3. **COPY package*.json ./**: Copia los archivos `package.json` y `package-lock.json` al directorio de trabajo.
+4. **RUN npm install**: Instala las dependencias del proyecto.
+5. **COPY . .**: Copia todos los archivos del proyecto al directorio de trabajo.
+6. **RUN npm run build**: Construye la aplicación React para producción.
+7. **RUN npm install -g serve**: Instala `serve` globalmente para servir la aplicación.
+8. **EXPOSE 3000**: Expone el puerto 3000.
+9. **CMD ["serve", "-s", "build"]**: Comando por defecto para servir la aplicación.
+
+### Construir la imagen Docker
+
+Para construir la imagen Docker de este proyecto, utiliza el siguiente comando:
+
+```sh
+docker build -t futurama-api .
+
+### Ejecutar la imagen Docker
+Para ejecutar la imagen Docker, usa el siguiente comando:
+
+docker run -p 3000:3000 futurama-api
+
+Esto expondrá la aplicación en http://localhost:3000
+
+### Link del Repositorio de DockerHub
+**https://hub.docker.com/r/alexismcode/futurama-api**
+
+### Docker Pull Comand
+**docker pull alexismcode/futurama-api**
+
+
 ## 🏆 Créditos
 Este proyecto fue desarrollado por Alexis Sánchez como parte de un ejercicio de práctica.
 
