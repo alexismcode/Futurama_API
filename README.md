@@ -41,7 +41,9 @@ docker build -t futurama-api .
 ### ▶️ Ejecutar la imagen Docker
 Para ejecutar la imagen Docker, usa el siguiente comando:
 
+```sh
 docker run -p 3000:3000 futurama-api
+```
 
 Esto expondrá la aplicación en http://localhost:3000
 
@@ -49,8 +51,9 @@ Esto expondrá la aplicación en http://localhost:3000
 **https://hub.docker.com/r/alexismcode/futurama-api**
 
 ### ✏️ Docker Pull Comand
-**docker pull alexismcode/futurama-api**
-
+```sh
+docker pull alexismcode/futurama-api
+```
 
 ## 🏆 Créditos
 Este proyecto fue desarrollado por Alexis Sánchez como parte de un ejercicio de práctica.
